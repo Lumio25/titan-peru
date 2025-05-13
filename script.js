@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
- // Funcionamiento de las pestañas en la sección Nosotros   
+// Funcionamiento de las pestañas en la sección Nosotros   
  const tabs = document.querySelectorAll('.tab');
     
     if (tabs.length > 0) {
@@ -39,12 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 tabPanes.forEach(pane => pane.classList.remove('active'));
                 
                 // Mostrar el contenido correspondiente
+                // Usar querySelector en lugar de getElementById para mayor compatibilidad
                 document.querySelector('#' + tabId).classList.add('active');
             });
         });
     }
-});
-
     // Restablecer visibilidad del menú al cambiar el tamaño de pantalla
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768) {
