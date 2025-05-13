@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 tabPanes.forEach(pane => pane.classList.remove('active'));
                 
                 // Mostrar el contenido correspondiente
-                document.getElementById(tabId).classList.add('active');
+                document.querySelector('#' + tabId).classList.add('active');
             });
         });
     }
