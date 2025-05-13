@@ -106,3 +106,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Verificar secciones al hacer scroll
     window.addEventListener('scroll', checkSections);
 });
+// Efecto de opacidad en el banner al hacer scroll
+const bannerImage = document.getElementById('bannerImage');
+if (bannerImage) {
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        const maxScroll = 500;
+        let opacity = 1 - (scrollPosition / maxScroll);
+        opacity = Math.max(0, Math.min(1, opacity));
+        bannerImage.style.opacity = opacity;
+    });
+}
