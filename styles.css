@@ -674,3 +674,37 @@ footer {
         margin-bottom: 30px;
     }
 }
+/* Estilos para el logo en el footer */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-logo-img {
+    max-width: 80px;
+    height: auto;
+}
+
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajustes responsivos para el footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-logo-img {
+        margin-bottom: 10px;
+    }
+}
