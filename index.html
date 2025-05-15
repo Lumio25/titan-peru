@@ -1,0 +1,104 @@
+<!-- Proyectos Destacados -->
+<section class="projects" id="proyectos">
+<div class="container">
+<h2 class="section-title">Proyectos Destacados</h2>
+<div class="projects-grid">
+<div class="project-card" data-project-id="1">
+<img alt="Edificio Corporativo GyM" src="img/proyecto1.jpg"/>
+<div class="project-info">
+<h3>Edificio Corporativo GyM</h3>
+<p>Ejecución de los sistemas IIEE (instalaciones eléctricas), IISS (instalaciones sanitarias), ACI (automatización y control de iluminación en áreas comunes) y DACI (detección y alarma contra incendios).</p>
+<span class="project-tag">Entregado</span>
+<button class="btn-ver-mas">Ver más</button>
+</div>
+</div>
+<div class="project-card" data-project-id="2">
+<img alt="Clínica AVIVA" src="img/proyecto2.jpg"/>
+<div class="project-info">
+<h3>Clínica AVIVA</h3>
+<p>Instalaciones eléctricas y sanitarias para moderno centro médico en Miraflores.</p>
+<span class="project-tag">Entregado</span>
+<button class="btn-ver-mas">Ver más</button>
+</div>
+</div>
+<div class="project-card" data-project-id="3">
+<img alt="Rehabilitación IE. 0034 Bicentenario - Lima" src="img/proyecto3.jpg"/>
+<div class="project-info">
+<h3>Rehabilitación IE. 0034 Bicentenario</h3>
+<p>Implementación de Instalaciones Eléctricas Internas (IIEE), Instalaciones Eléctricas de Baja Tensión (IISS) y sistemas de Corrientes Débiles.</p>
+<span class="project-tag">Entregado</span>
+<button class="btn-ver-mas">Ver más</button>
+</div>
+</div>
+<div class="project-card" data-project-id="4">
+<img alt="Backus - Ampliación Latas Vacías" src="img/proyecto4.jpg"/>
+<div class="project-info">
+<h3>Ampliación Latas Vacías - Backus</h3>
+<p>Sistemas eléctricos, sanitarios, ACI, DACI y HVAC para planta industrial.</p>
+<span class="project-tag">Entregado</span>
+<button class="btn-ver-mas">Ver más</button>
+</div>
+</div>
+<div class="project-card" data-project-id="5">
+<img alt="Rehabilitación IE. Pariacoto - Ancash" src="img/proyecto5.jpg"/>
+<div class="project-info">
+<h3>Rehabilitación IE. Pariacoto</h3>
+<p>Instalaciones eléctricas, sanitarias y corrientes débiles para institución educativa.</p>
+<span class="project-tag">En Ejecución</span>
+<button class="btn-ver-mas">Ver más</button>
+</div>
+</div>
+<div class="project-card" data-project-id="6">
+<img alt="Rehabilitación IE. San Nicolas- Ancash" src="img/proyecto6.jpg"/>
+<div class="project-info">
+<h3>Rehabilitación IE. San Nicolas- Ancash</h3>
+<p>Implementación de sistemas IIEE (instalaciones eléctricas), IISS (instalaciones sanitarias) y Corrientes Débiles para la institución educativa.</p>
+<span class="project-tag">En Ejecución</span>
+<button class="btn-ver-mas">Ver más</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Modal para detalles de proyectos -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h2 id="modalTitle">Título del Proyecto</h2>
+            <span id="modalTag" class="project-tag">Estado</span>
+        </div>
+        <div class="modal-body">
+            <div class="modal-gallery">
+                <div class="main-image-container">
+                    <img id="mainProjectImage" src="" alt="Imagen principal del proyecto">
+                </div>
+                <div class="thumbnail-gallery" id="thumbnailGallery">
+                    <!-- Las miniaturas se cargarán dinámicamente -->
+                </div>
+            </div>
+            <div class="modal-description">
+                <h3>Descripción del Proyecto</h3>
+                <p id="modalDescription">Descripción detallada del proyecto</p>
+                
+                <div class="project-details">
+                    <div class="detail-item">
+                        <h4>Ubicación</h4>
+                        <p id="modalLocation">Ubicación del proyecto</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>Año de Ejecución</h4>
+                        <p id="modalYear">Año del proyecto</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>Servicios Realizados</h4>
+                        <ul id="modalServices">
+                            <!-- Los servicios se cargarán dinámicamente -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
