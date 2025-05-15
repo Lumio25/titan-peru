@@ -966,12 +966,3 @@ footer {
         height: 250px;
     }
 }
-.tab-pane {
-    display: none;
-    animation: fadeIn 0.5s ease forwards;
-}
-
-.tab-pane.active {
-    display: flex;
-    flex-wrap: wrap;
-}
