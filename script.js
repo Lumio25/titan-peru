@@ -48,6 +48,31 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Funcionamiento de las pestañas en la sección Nosotros   
+    const tabs = document.querySelectorAll('.tab');
+    
+    if (tabs.length > 0) {
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remover clase active de todas las pestañas
+                tabs.forEach(t => t.classList.remove('active'));
+                
+                // Agregar clase active a la pestaña actual
+                this.classList.add('active');
+                
+                // Obtener el id del contenido a mostrar
+                const tabId = this.getAttribute('data-tab');
+                
+                // Ocultar todos los contenidos
+                const tabPanes = document.querySelectorAll('.tab-pane');
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+                
+                // Mostrar el contenido correspondiente
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    }
     
     // Restablecer visibilidad del menú al cambiar el tamaño de pantalla
     window.addEventListener('resize', function() {
@@ -110,18 +135,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Verificar secciones al hacer scroll
     window.addEventListener('scroll', checkSections);
+    
+    // Efecto de opacidad en el banner al hacer scroll
+    const bannerImage = document.getElementById('bannerImage');
+    if (bannerImage) {
+        window.addEventListener('scroll', function () {
+            const scrollPosition = window.scrollY;
+            const maxScroll = 500;
+            let opacity = 1 - (scrollPosition / maxScroll);
+            opacity = Math.max(0, Math.min(1, opacity));
+            bannerImage.style.opacity = opacity;
+        });
+    }
 });
-// Efecto de opacidad en el banner al hacer scroll
-const bannerImage = document.getElementById('bannerImage');
-if (bannerImage) {
-    window.addEventListener('scroll', function () {
-        const scrollPosition = window.scrollY;
-        const maxScroll = 500;
-        let opacity = 1 - (scrollPosition / maxScroll);
-        opacity = Math.max(0, Math.min(1, opacity));
-        bannerImage.style.opacity = opacity;
-    });
-}
 // Datos de los proyectos (normalmente esto vendría de una base de datos)
 const proyectosData = {
     "1": {
