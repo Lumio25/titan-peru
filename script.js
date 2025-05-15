@@ -1,24 +1,3 @@
-// Manejo del menú responsivo
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('nav ul');
-    
-    menuToggle.addEventListener('click', function() {
-        navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-        menuToggle.classList.toggle('active');
-    });
-    
-    // Ocultar menú al hacer clic en un enlace (en mobile)
-    const navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) {
-                navMenu.style.display = 'none';
-                menuToggle.classList.remove('active');
-            }
-        });
-    });
-
 // Funcionamiento de las pestañas en la sección Nosotros   
  const tabs = document.querySelectorAll('.tab');
     
@@ -39,11 +18,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 tabPanes.forEach(pane => pane.classList.remove('active'));
                 
                 // Mostrar el contenido correspondiente
-                // Usar querySelector en lugar de getElementById para mayor compatibilidad
-                document.querySelector('#' + tabId).classList.add('active');
+                // Asegurarse de que el elemento existe antes de intentar mostrarle
+                const targetPane = document.getElementById(tabId);
+                if (targetPane) {
+                    targetPane.classList.add('active');
+                } else {
+                    console.error('No se encontró el elemento con ID:', tabId);
+                }
             });
         });
     }
+// Manejo del menú responsivo
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+    
+    menuToggle.addEventListener('click', function() {
+        navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        menuToggle.classList.toggle('active');
+    });
+    
+    // Ocultar menú al hacer clic en un enlace (en mobile)
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                navMenu.style.display = 'none';
+                menuToggle.classList.remove('active');
+            }
+        });
+    });
+    
     // Restablecer visibilidad del menú al cambiar el tamaño de pantalla
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768) {
