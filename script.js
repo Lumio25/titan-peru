@@ -443,3 +443,67 @@ document.addEventListener('keydown', function(event) {
         closeProjectModal();
     }
 });
+
+<script src="script.js"></script>
+<!-- Añadir funcionalidad para botones "Ver más" en proyectos y mantener efecto de scroll -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Efecto de scroll en el banner
+    window.addEventListener('scroll', function () {
+        const banner = document.getElementById('bannerImage');
+        if (banner) {
+            const scrollPosition = window.scrollY;
+            const maxScroll = 500;
+            let opacity = 1 - (scrollPosition / maxScroll);
+            opacity = Math.max(0, Math.min(1, opacity));
+            banner.style.opacity = opacity;
+        }
+    });
+
+    // Funcionalidad para los botones "Ver más" en proyectos
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        // Añadir un botón "Ver más" a cada proyecto
+        const projectInfo = card.querySelector('.project-info');
+        const projectDescription = projectInfo.querySelector('p');
+        
+        // Si el texto es largo, acortarlo y añadir botón "Ver más"
+        if (projectDescription && projectDescription.textContent.length > 100) {
+            const fullText = projectDescription.textContent;
+            const shortText = fullText.substring(0, 100) + '...';
+            
+            // Guardamos el texto completo como atributo data
+            projectDescription.setAttribute('data-full-text', fullText);
+            // Mostramos el texto corto inicialmente
+            projectDescription.textContent = shortText;
+            
+            // Crear botón "Ver más"
+            const moreButton = document.createElement('button');
+            moreButton.textContent = 'Ver más';
+            moreButton.classList.add('btn-ver-mas');
+            moreButton.style.backgroundColor = '#084887';
+            moreButton.style.color = 'white';
+            moreButton.style.border = 'none';
+            moreButton.style.borderRadius = '4px';
+            moreButton.style.padding = '5px 10px';
+            moreButton.style.marginTop = '10px';
+            moreButton.style.cursor = 'pointer';
+            
+            // Añadir funcionalidad al botón
+            moreButton.addEventListener('click', function() {
+                if (this.textContent === 'Ver más') {
+                    projectDescription.textContent = projectDescription.getAttribute('data-full-text');
+                    this.textContent = 'Ver menos';
+                } else {
+                    projectDescription.textContent = shortText;
+                    this.textContent = 'Ver más';
+                }
+            });
+            
+            // Añadir botón debajo de la descripción
+            projectInfo.insertBefore(moreButton, projectInfo.querySelector('.project-tag'));
+        }
+    });
+});
+</script>
