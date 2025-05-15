@@ -228,18 +228,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Verificar secciones al hacer scroll
     window.addEventListener('scroll', checkSections);
     
-    // Efecto de opacidad en el banner al hacer scroll
-    const bannerImage = document.getElementById('bannerImage');
-    if (bannerImage) {
-        window.addEventListener('scroll', function () {
-            const scrollPosition = window.scrollY;
-            const maxScroll = 500;
-            let opacity = 1 - (scrollPosition / maxScroll);
-            opacity = Math.max(0, Math.min(1, opacity));
-            bannerImage.style.opacity = opacity;
-        });
-    }
-    
+// Efecto de opacidad en el banner al hacer scroll (para ambos banners)
+const bannerImage = document.getElementById('bannerImage');
+const bannerImageMobile = document.getElementById('bannerImageMobile');
+
+if (bannerImage && bannerImageMobile) {
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        const maxScroll = 500;
+        let opacity = 1 - (scrollPosition / maxScroll);
+        opacity = Math.max(0, Math.min(1, opacity));
+        
+        bannerImage.style.opacity = opacity;
+        bannerImageMobile.style.opacity = opacity;
+    });
+}
     // Modal de proyectos
     const projectModal = document.getElementById('projectModal');
     const projectCards = document.querySelectorAll('.project-card');
