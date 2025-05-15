@@ -966,3 +966,24 @@ footer {
         height: 250px;
     }
 }
+
+/* Estilos para banner responsivo - Detecta automáticamente el dispositivo */
+.banner-mobile {
+    display: none; /* Oculto por defecto */
+}
+
+.banner-desktop {
+    display: block; /* Visible por defecto (computadora) */
+}
+
+/* Media query que detecta automáticamente dispositivos móviles */
+@media (max-width: 768px) {
+    .banner-mobile {
+        display: block; /* Muestra banner móvil en pantallas pequeñas */
+        object-position: center; /* Centra la imagen */
+    }
+    
+    .banner-desktop {
+        display: none; /* Oculta banner desktop en pantallas pequeñas */
+    }
+}
