@@ -1,153 +1,3 @@
-// Funcionamiento de las pestañas en la sección Nosotros   
- const tabs = document.querySelectorAll('.tab');
-    
-    if (tabs.length > 0) {
-        tabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                // Remover clase active de todas las pestañas
-                tabs.forEach(t => t.classList.remove('active'));
-                
-                // Agregar clase active a la pestaña actual
-                this.classList.add('active');
-                
-                // Obtener el id del contenido a mostrar
-                const tabId = this.getAttribute('data-tab');
-                
-                // Ocultar todos los contenidos
-                const tabPanes = document.querySelectorAll('.tab-pane');
-                tabPanes.forEach(pane => pane.classList.remove('active'));
-                
-                // Mostrar el contenido correspondiente
-                // Asegurarse de que el elemento existe antes de intentar mostrarle
-                const targetPane = document.getElementById(tabId);
-                if (targetPane) {
-                    targetPane.classList.add('active');
-                } else {
-                    console.error('No se encontró el elemento con ID:', tabId);
-                }
-            });
-        });
-    }
-// Manejo del menú responsivo
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('nav ul');
-    
-    menuToggle.addEventListener('click', function() {
-        navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-        menuToggle.classList.toggle('active');
-    });
-    
-    // Ocultar menú al hacer clic en un enlace (en mobile)
-    const navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) {
-                navMenu.style.display = 'none';
-                menuToggle.classList.remove('active');
-            }
-        });
-    });
-
-    // Funcionamiento de las pestañas en la sección Nosotros   
-    const tabs = document.querySelectorAll('.tab');
-    
-    if (tabs.length > 0) {
-        tabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                // Remover clase active de todas las pestañas
-                tabs.forEach(t => t.classList.remove('active'));
-                
-                // Agregar clase active a la pestaña actual
-                this.classList.add('active');
-                
-                // Obtener el id del contenido a mostrar
-                const tabId = this.getAttribute('data-tab');
-                
-                // Ocultar todos los contenidos
-                const tabPanes = document.querySelectorAll('.tab-pane');
-                tabPanes.forEach(pane => pane.classList.remove('active'));
-                
-                // Mostrar el contenido correspondiente
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
-    }
-    
-    // Restablecer visibilidad del menú al cambiar el tamaño de pantalla
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            navMenu.style.display = 'flex';
-        } else {
-            navMenu.style.display = 'none';
-            menuToggle.classList.remove('active');
-        }
-    });
-    
-    // Cambiar el color del header al hacer scroll
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('header');
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-    
-    // Manejo del formulario de contacto
-    const contactForm = document.getElementById('form-contacto');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Aquí normalmente enviarías los datos a un servidor
-            // Como ejemplo, mostramos una alerta
-            alert('¡Gracias por contactarnos! Te responderemos a la brevedad.');
-            contactForm.reset();
-        });
-    }
-    
-    // Animación al hacer scroll
-    const sections = document.querySelectorAll('section');
-    
-    function checkSections() {
-        const triggerBottom = window.innerHeight * 0.8;
-        
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            
-            if (sectionTop < triggerBottom) {
-                section.style.opacity = '1';
-                section.style.transform = 'translateY(0)';
-            }
-        });
-    }
-    
-    // Inicializar estilos para la animación
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
-    
-    // Verificar secciones al cargar la página
-    window.addEventListener('load', checkSections);
-    
-    // Verificar secciones al hacer scroll
-    window.addEventListener('scroll', checkSections);
-    
-    // Efecto de opacidad en el banner al hacer scroll
-    const bannerImage = document.getElementById('bannerImage');
-    if (bannerImage) {
-        window.addEventListener('scroll', function () {
-            const scrollPosition = window.scrollY;
-            const maxScroll = 500;
-            let opacity = 1 - (scrollPosition / maxScroll);
-            opacity = Math.max(0, Math.min(1, opacity));
-            bannerImage.style.opacity = opacity;
-        });
-    }
-});
 // Datos de los proyectos (normalmente esto vendría de una base de datos)
 const proyectosData = {
     "1": {
@@ -260,46 +110,81 @@ const proyectosData = {
     }
 };
 
-// Manejo del menú responsivo
+// Inicializar funcionalidades cuando el DOM está completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
+    // Manejo del menú responsivo
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('nav ul');
     
-    menuToggle.addEventListener('click', function() {
-        navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-        menuToggle.classList.toggle('active');
-    });
-    
-    // Ocultar menú al hacer clic en un enlace (en mobile)
-    const navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) {
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+            menuToggle.classList.toggle('active');
+        });
+        
+        // Ocultar menú al hacer clic en un enlace (en mobile)
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    navMenu.style.display = 'none';
+                    menuToggle.classList.remove('active');
+                }
+            });
+        });
+
+        // Restablecer visibilidad del menú al cambiar el tamaño de pantalla
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navMenu.style.display = 'flex';
+            } else {
                 navMenu.style.display = 'none';
                 menuToggle.classList.remove('active');
             }
         });
-    });
-
-    // Restablecer visibilidad del menú al cambiar el tamaño de pantalla
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            navMenu.style.display = 'flex';
-        } else {
-            navMenu.style.display = 'none';
-            menuToggle.classList.remove('active');
-        }
-    });
+    }
+    
+    // Funcionamiento de las pestañas en la sección Nosotros
+    const tabs = document.querySelectorAll('.tab');
+    
+    if (tabs.length > 0) {
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remover clase active de todas las pestañas
+                tabs.forEach(t => t.classList.remove('active'));
+                
+                // Agregar clase active a la pestaña actual
+                this.classList.add('active');
+                
+                // Obtener el id del contenido a mostrar
+                const tabId = this.getAttribute('data-tab');
+                
+                // Ocultar todos los contenidos
+                const tabPanes = document.querySelectorAll('.tab-pane');
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+                
+                // Mostrar el contenido correspondiente
+                const targetPane = document.getElementById(tabId);
+                if (targetPane) {
+                    targetPane.classList.add('active');
+                } else {
+                    console.error('No se encontró el elemento con ID:', tabId);
+                }
+            });
+        });
+    }
     
     // Cambiar el color del header al hacer scroll
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('header');
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+    const header = document.querySelector('header');
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
     
     // Manejo del formulario de contacto
     const contactForm = document.getElementById('form-contacto');
@@ -314,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Animación al hacer scroll
+    // Animación al hacer scroll para las secciones
     const sections = document.querySelectorAll('section');
     
     function checkSections() {
@@ -342,199 +227,149 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Verificar secciones al hacer scroll
     window.addEventListener('scroll', checkSections);
-
-    // Nueva funcionalidad: Modal de proyectos
-    const projectCards = document.querySelectorAll('.project-card');
-    const projectModal = document.getElementById('projectModal');
-    const closeModal = document.querySelector('.close-modal');
     
-    // Añadir evento click a cada tarjeta de proyecto
-    projectCards.forEach(card => {
-        const verMasBtn = card.querySelector('.btn-ver-mas');
-        if (verMasBtn) {
-            verMasBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                const projectId = card.getAttribute('data-project-id');
-                openProjectModal(projectId);
-            });
-        }
-    });
-    
-    // Abrir modal con datos del proyecto
-    function openProjectModal(projectId) {
-        const projectData = proyectosData[projectId];
-        
-        if (!projectData) return;
-    
-    // Actualizar contenido del modal
-    document.getElementById('modalTitle').textContent = projectData.titulo;
-    document.getElementById('modalTag').textContent = projectData.estado;
-    document.getElementById('modalTag').className = 'project-tag'; // Resetear clases
-    if (projectData.estado === 'En Ejecución') {
-        document.getElementById('modalTag').classList.add('en-ejecucion');
-    } else {
-        document.getElementById('modalTag').classList.add('entregado');
-    }
-    
-    document.getElementById('modalDescription').textContent = projectData.descripcion;
-    document.getElementById('modalLocation').textContent = projectData.ubicacion;
-    document.getElementById('modalYear').textContent = projectData.año;
-    
-    // Cargar servicios
-    const servicesList = document.getElementById('modalServices');
-    servicesList.innerHTML = '';
-    projectData.servicios.forEach(servicio => {
-        const li = document.createElement('li');
-        li.textContent = servicio;
-        servicesList.appendChild(li);
-    });
-    
-    // Cargar imagen principal
-    const mainImage = document.getElementById('mainProjectImage');
-    mainImage.src = projectData.imagenes[0];
-    mainImage.alt = projectData.titulo;
-    
-    // Cargar miniaturas
-    const thumbnailGallery = document.getElementById('thumbnailGallery');
-    thumbnailGallery.innerHTML = '';
-    
-    projectData.imagenes.forEach((imagen, index) => {
-        const thumbnail = document.createElement('img');
-        thumbnail.src = imagen;
-        thumbnail.alt = `${projectData.titulo} - Imagen ${index + 1}`;
-        thumbnail.classList.add('thumbnail');
-        
-        // La primera miniatura es la activa por defecto
-        if (index === 0) {
-            thumbnail.classList.add('active');
-        }
-        
-        // Añadir evento para cambiar la imagen principal al hacer clic
-        thumbnail.addEventListener('click', function() {
-            // Quitar clase active de todas las miniaturas
-            document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
-            
-            // Añadir clase active a la miniatura actual
-            this.classList.add('active');
-            
-            // Actualizar imagen principal
-            mainImage.src = this.src;
-            mainImage.alt = this.alt;
-            
-            // Efecto de transición para la imagen principal
-            mainImage.style.opacity = '0.7';
-            setTimeout(() => {
-                mainImage.style.opacity = '1';
-            }, 200);
-        });
-        
-        thumbnailGallery.appendChild(thumbnail);
-    });
-    
-    // Mostrar el modal con animación
-    projectModal.style.display = 'block';
-    setTimeout(() => {
-        projectModal.classList.add('show');
-    }, 10); // Pequeño retraso para asegurar que la transición CSS funcione correctamente
-    
-    // Bloquear el scroll de la página
-    document.body.style.overflow = 'hidden';
-}
-
-// Función para cerrar el modal
-function closeProjectModal() {
-    const projectModal = document.getElementById('projectModal');
-    projectModal.classList.remove('show');
-    
-    // Esperar a que termine la animación antes de ocultar completamente
-    setTimeout(() => {
-        projectModal.style.display = 'none';
-        // Restaurar el scroll de la página
-        document.body.style.overflow = '';
-    }, 300); // La duración debe coincidir con la transición CSS
-}
-
-// Añadir evento para cerrar el modal con el botón de cerrar
-const closeModalBtn = document.querySelector('.close-modal');
-if (closeModalBtn) {
-    closeModalBtn.addEventListener('click', closeProjectModal);
-}
-
-// Cerrar el modal al hacer clic fuera del contenido
-window.addEventListener('click', function(event) {
-    const projectModal = document.getElementById('projectModal');
-    if (event.target === projectModal) {
-        closeProjectModal();
-    }
-});
-
-// Opcionalmente: Cerrar el modal con la tecla ESC
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        closeProjectModal();
-    }
-});
-
-<script src="script.js"></script>
-<!-- Añadir funcionalidad para botones "Ver más" en proyectos y mantener efecto de scroll -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Efecto de scroll en el banner
-    window.addEventListener('scroll', function () {
-        const banner = document.getElementById('bannerImage');
-        if (banner) {
+    // Efecto de opacidad en el banner al hacer scroll
+    const bannerImage = document.getElementById('bannerImage');
+    if (bannerImage) {
+        window.addEventListener('scroll', function () {
             const scrollPosition = window.scrollY;
             const maxScroll = 500;
             let opacity = 1 - (scrollPosition / maxScroll);
             opacity = Math.max(0, Math.min(1, opacity));
-            banner.style.opacity = opacity;
+            bannerImage.style.opacity = opacity;
+        });
+    }
+    
+    // Modal de proyectos
+    const projectModal = document.getElementById('projectModal');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    // Añadir evento click a cada tarjeta de proyecto
+    if (projectCards.length > 0 && projectModal) {
+        projectCards.forEach(card => {
+            const verMasBtn = card.querySelector('.btn-ver-mas');
+            if (verMasBtn) {
+                verMasBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const projectId = card.getAttribute('data-project-id');
+                    openProjectModal(projectId);
+                });
+            }
+        });
+    }
+    
+    // Función para abrir el modal de proyectos
+    function openProjectModal(projectId) {
+        const projectData = proyectosData[projectId];
+        
+        if (!projectData || !projectModal) return;
+    
+        // Actualizar contenido del modal
+        document.getElementById('modalTitle').textContent = projectData.titulo;
+        document.getElementById('modalTag').textContent = projectData.estado;
+        document.getElementById('modalTag').className = 'project-tag'; // Resetear clases
+        if (projectData.estado === 'En Ejecución') {
+            document.getElementById('modalTag').classList.add('en-ejecucion');
+        } else {
+            document.getElementById('modalTag').classList.add('entregado');
+        }
+        
+        document.getElementById('modalDescription').textContent = projectData.descripcion;
+        document.getElementById('modalLocation').textContent = projectData.ubicacion;
+        document.getElementById('modalYear').textContent = projectData.año;
+        
+        // Cargar servicios
+        const servicesList = document.getElementById('modalServices');
+        servicesList.innerHTML = '';
+        projectData.servicios.forEach(servicio => {
+            const li = document.createElement('li');
+            li.textContent = servicio;
+            servicesList.appendChild(li);
+        });
+        
+        // Cargar imagen principal
+        const mainImage = document.getElementById('mainProjectImage');
+        mainImage.src = projectData.imagenes[0];
+        mainImage.alt = projectData.titulo;
+        
+        // Cargar miniaturas
+        const thumbnailGallery = document.getElementById('thumbnailGallery');
+        thumbnailGallery.innerHTML = '';
+        
+        projectData.imagenes.forEach((imagen, index) => {
+            const thumbnail = document.createElement('img');
+            thumbnail.src = imagen;
+            thumbnail.alt = `${projectData.titulo} - Imagen ${index + 1}`;
+            thumbnail.classList.add('thumbnail');
+            
+            // La primera miniatura es la activa por defecto
+            if (index === 0) {
+                thumbnail.classList.add('active');
+            }
+            
+            // Añadir evento para cambiar la imagen principal al hacer clic
+            thumbnail.addEventListener('click', function() {
+                // Quitar clase active de todas las miniaturas
+                document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
+                
+                // Añadir clase active a la miniatura actual
+                this.classList.add('active');
+                
+                // Actualizar imagen principal
+                mainImage.src = this.src;
+                mainImage.alt = this.alt;
+                
+                // Efecto de transición para la imagen principal
+                mainImage.style.opacity = '0.7';
+                setTimeout(() => {
+                    mainImage.style.opacity = '1';
+                }, 200);
+            });
+            
+            thumbnailGallery.appendChild(thumbnail);
+        });
+        
+        // Mostrar el modal con animación
+        projectModal.style.display = 'block';
+        setTimeout(() => {
+            projectModal.classList.add('show');
+        }, 10); // Pequeño retraso para asegurar que la transición CSS funcione correctamente
+        
+        // Bloquear el scroll de la página
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Función para cerrar el modal
+    function closeProjectModal() {
+        if (!projectModal) return;
+        
+        projectModal.classList.remove('show');
+        
+        // Esperar a que termine la animación antes de ocultar completamente
+        setTimeout(() => {
+            projectModal.style.display = 'none';
+            // Restaurar el scroll de la página
+            document.body.style.overflow = '';
+        }, 300); // La duración debe coincidir con la transición CSS
+    }
+
+    // Añadir evento para cerrar el modal con el botón de cerrar
+    const closeModalBtn = document.querySelector('.close-modal');
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', closeProjectModal);
+    }
+
+    // Cerrar el modal al hacer clic fuera del contenido
+    window.addEventListener('click', function(event) {
+        if (event.target === projectModal) {
+            closeProjectModal();
         }
     });
 
-    // Funcionalidad para los botones "Ver más" en proyectos
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    projectCards.forEach(card => {
-        // Añadir un botón "Ver más" a cada proyecto
-        const projectInfo = card.querySelector('.project-info');
-        const projectDescription = projectInfo.querySelector('p');
-        
-        // Si el texto es largo, acortarlo y añadir botón "Ver más"
-        if (projectDescription && projectDescription.textContent.length > 100) {
-            const fullText = projectDescription.textContent;
-            const shortText = fullText.substring(0, 100) + '...';
-            
-            // Guardamos el texto completo como atributo data
-            projectDescription.setAttribute('data-full-text', fullText);
-            // Mostramos el texto corto inicialmente
-            projectDescription.textContent = shortText;
-            
-            // Crear botón "Ver más"
-            const moreButton = document.createElement('button');
-            moreButton.textContent = 'Ver más';
-            moreButton.classList.add('btn-ver-mas');
-            moreButton.style.backgroundColor = '#084887';
-            moreButton.style.color = 'white';
-            moreButton.style.border = 'none';
-            moreButton.style.borderRadius = '4px';
-            moreButton.style.padding = '5px 10px';
-            moreButton.style.marginTop = '10px';
-            moreButton.style.cursor = 'pointer';
-            
-            // Añadir funcionalidad al botón
-            moreButton.addEventListener('click', function() {
-                if (this.textContent === 'Ver más') {
-                    projectDescription.textContent = projectDescription.getAttribute('data-full-text');
-                    this.textContent = 'Ver menos';
-                } else {
-                    projectDescription.textContent = shortText;
-                    this.textContent = 'Ver más';
-                }
-            });
-            
-            // Añadir botón debajo de la descripción
-            projectInfo.insertBefore(moreButton, projectInfo.querySelector('.project-tag'));
+    // Cerrar el modal con la tecla ESC
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeProjectModal();
         }
     });
 });
-</script>
