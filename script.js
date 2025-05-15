@@ -250,31 +250,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-// Funcionamiento de las pestañas en la sección Nosotros   
- const tabs = document.querySelectorAll('.tab');
-    
-    if (tabs.length > 0) {
-        tabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                // Remover clase active de todas las pestañas
-                tabs.forEach(t => t.classList.remove('active'));
-                
-                // Agregar clase active a la pestaña actual
-                this.classList.add('active');
-                
-                // Obtener el id del contenido a mostrar
-                const tabId = this.getAttribute('data-tab');
-                
-                // Ocultar todos los contenidos
-                const tabPanes = document.querySelectorAll('.tab-pane');
-                tabPanes.forEach(pane => pane.classList.remove('active'));
-                
-                // Mostrar el contenido correspondiente
-                // Usar querySelector en lugar de getElementById para mayor compatibilidad
-                document.querySelector('#' + tabId).classList.add('active');
-            });
-        });
-    }
     // Restablecer visibilidad del menú al cambiar el tamaño de pantalla
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768) {
