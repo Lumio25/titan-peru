@@ -21,14 +21,14 @@ const proyectosData = {
     "2": {
         titulo: "Clínica AVIVA",
         estado: "Entregado",
-        descripcion: "Implementación completa de sistemas eléctricos y sanitarios para un moderno centro médico en el distrito de Miraflores. El proyecto abarcó desde el diseño hasta la instalación de sistemas especializados para áreas hospitalarias, incluyendo quirófanos, salas de emergencia y consultorios con altos estándares de seguridad y eficiencia energética.",
-        ubicacion: "Miraflores, Lima",
+        descripcion: "Rehabilitación integral de la Institución Educativa Gastón Vidal, incluyendo la implementación de sistemas eléctricos (IIEE), instalaciones sanitarias (IISS) y corrientes débiles. El proyecto abarca el diseño, ejecución y mantenimiento para mejorar la infraestructura educativa con altos estándares de calidad y seguridad.",
+        ubicacion: "Nuevo Chimbote - Santa - Ancash",
         año: "2022",
         servicios: [
-            "Instalaciones eléctricas para equipos médicos especializados",
+            "Instalaciones eléctricas",
             "Sistemas de respaldo de energía y UPS",
-            "Instalaciones sanitarias hospitalarias",
-            "Sistemas de gases medicinales"
+            "Instalaciones sanitarias",
+            "Sistemas de corrientes débiles"
         ],
         imagenes: [
             "img/proyecto2.jpg",
