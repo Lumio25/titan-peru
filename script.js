@@ -19,7 +19,7 @@ const proyectosData = {
         ]
     },
     "2": {
-        titulo: "Clínica AVIVA",
+        titulo: "Rehabilitación IE. Gastón Vidal",
         estado: "Entregado",
         descripcion: "Rehabilitación integral de la Institución Educativa Gastón Vidal, incluyendo la implementación de sistemas eléctricos (IIEE), instalaciones sanitarias (IISS) y corrientes débiles. El proyecto abarca el diseño, ejecución y mantenimiento para mejorar la infraestructura educativa con altos estándares de calidad y seguridad.",
         ubicacion: "Nuevo Chimbote - Santa - Ancash",
