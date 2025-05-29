@@ -37,16 +37,18 @@ const proyectosData = {
         ]
     },
     "3": {
-        titulo: "Rehabilitación IE. 0034 Bicentenario",
+        titulo: "Rehabilitación HOTEL INTRO - Barranco",
         estado: "Entregado",
-        descripcion: "Rehabilitación completa de las instalaciones eléctricas y sistemas de comunicación para la institución educativa Bicentenario 0034 en Lima. El proyecto incluyó la Implementación de Instalaciones Eléctricas Internas (IIEE), que abastecen de energía a aulas y espacios comunes; Instalaciones Eléctricas de Baja Tensión (IISS), adecuadas para equipos electrónicos y sistemas de iluminación; y sistemas de Corrientes Débiles, que abarcan redes de datos, cámaras de vigilancia, alarmas y control de accesos.",
-        ubicacion: "Ate, Lima",
-        año: "2023",
+        descripcion: "Rehabilitación completa de las instalaciones eléctricas y sanitarias para el Hotel Intro en Barranco, Lima. El proyecto incluyó la renovación del sistema eléctrico, instalación de tablero eléctrico, sistemas de iluminación y redes de datos; así como la implementación de nuevas griferías, baños, duchas y sistema de agua caliente en habitaciones y áreas comunes,junto con trabajos de reparación y mejora en la casona.", 
+        ubicacion: "Barranco, Lima",
+        año: "2025",
         servicios: [
-            "Renovación del sistema eléctrico completo",
-            "Implementación de redes de datos y comunicaciones",
-            "Sistemas de seguridad y control de acceso",
-            "Iluminación eficiente en aulas y espacios comunes"
+"Renovación del sistema eléctrico completo",
+"Instalación de tablero eléctrico",
+"Implementación de redes de datos y comunicaciones",
+"Sistemas de seguridad y control de acceso",
+"Iluminación eficiente en habitaciones y áreas comunes",
+"Instalación de griferías, baños y duchas",
         ],
         imagenes: [
             "img/proyecto3.jpg",
