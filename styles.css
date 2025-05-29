@@ -987,3 +987,13 @@ footer {
         display: none; /* Oculta banner desktop en pantallas pequeñas */
     }
 }
+/* JUSTIFICAR SOLO EL CUERPO DE TEXTO DE NOSOTROS */
+.nosotros-texto p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.valores-lista p {
+    text-align: justify;
+    text-justify: inter-word;
+}
