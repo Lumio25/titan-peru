@@ -997,3 +997,10 @@ footer {
     text-align: justify;
     text-justify: inter-word;
 }
+/* JUSTIFICAR PÁRRAFOS EN EL MODAL DE PROYECTOS */
+.modal-description p {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.6;
+}
+
