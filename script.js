@@ -37,7 +37,7 @@ const proyectosData = {
         ]
     },
     "3": {
-        titulo: "Rehabilitación HOTEL INTRO",
+        titulo: "Hotel Intro Barranco",
         estado: "Entregado",
         descripcion: "Rehabilitación completa de las instalaciones eléctricas y sanitarias para el Hotel Intro en Barranco, Lima. El proyecto incluyó la renovación del sistema eléctrico, instalación de tablero eléctrico, sistemas de iluminación y redes de datos; así como la implementación de nuevas griferías, baños, duchas y sistema de agua caliente en habitaciones y áreas comunes,junto con trabajos de reparación y mejora en la casona.", 
         ubicacion: "Barranco, Lima",
