@@ -155,49 +155,98 @@
 <div class="container">
 <h2 class="section-title">Nuestros Servicios</h2>
 <div class="services-grid">
-<div class="service-card">
-<i class="fas fa-bolt"></i>
-<h3>Instalaciones Eléctricas</h3>
-<p>Proyectos en baja y media tensión con personal altamente calificado para satisfacer sus necesidades energéticas.</p>
-</div>
-<div class="service-card">
-<i class="fas fa-faucet"></i>
-<h3>Instalaciones Sanitarias</h3>
-<p>Servicios integrales de ingeniería, construcción, supervisión y mantenimiento de instalaciones sanitarias.</p>
-</div>
-<div class="service-card">
-<i class="fas fa-fire-extinguisher"></i>
-<h3>Agua Contra Incendio</h3>
+  <div class="service-card" data-service-id="1">
+    <i class="fas fa-bolt"></i>
+    <h3>Instalaciones Eléctricas</h3>
+    <p>Proyectos en baja y media tensión con personal altamente calificado para satisfacer sus necesidades energéticas.</p>
+    <button class="btn-ver-mas-servicio">Ver más</button>
+  </div>
+</div
+<div class="services-grid">
+  <div class="service-card" data-service-id="2">
+    <i class="fas fa-bolt"></i>
+    <h3>Instalaciones Sanitarias</h3>
+   <p>Servicios integrales de ingeniería, construcción, supervisión y mantenimiento de instalaciones sanitarias.</p>
+    <button class="btn-ver-mas-servicio">Ver más</button>
+  </div>
+</div
+<div class="services-grid">
+  <div class="service-card" data-service-id="3">
+    <i class="fas fa-bolt"></i>
+   <h3>Agua Contra Incendio</h3>
 <p>Soluciones profesionales en instalación, mantenimiento y protocolos de prueba para equipos de protección contra incendios.</p>
-</div>
-<div class="service-card">
-<i class="fas fa-network-wired"></i>
-<h3>Corrientes Débiles</h3>
+    <button class="btn-ver-mas-servicio">Ver más</button>
+  </div>
+</div
+<div class="services-grid">
+  <div class="service-card" data-service-id="4">
+    <i class="fas fa-bolt"></i>
+   <h3>Corrientes Débiles</h3>
 <p>Intercomunicadores, CCTV, sistemas de seguridad, redes de datos, telefonía y sistemas de comunicación especializados.</p>
-</div>
-<div class="service-card">
-<i class="fas fa-thermometer-half"></i>
-<h3>HVAC</h3>
-<p>Instalación y mantenimiento de sistemas de calefacción, ventilación y aire acondicionado para garantizar un ambiente confortable y eficiente.</p>
-</div>
-<div class="service-card">
-<i class="fas fa-hard-hat"></i>
-<h3>Construcción Civil</h3>
+    <button class="btn-ver-mas-servicio">Ver más</button>
+  </div>
+</div
+<div class="services-grid">
+  <div class="service-card" data-service-id="5">
+    <i class="fas fa-bolt"></i>
+    <h3>HVAC</h3>
+   <p>Instalación y mantenimiento de sistemas de calefacción, ventilación y aire acondicionado para garantizar un ambiente confortable y eficiente.</p>
+    <button class="btn-ver-mas-servicio">Ver más</button>
+  </div>
+</div
+<div class="services-grid">
+  <div class="service-card" data-service-id="6">
+    <i class="fas fa-bolt"></i>
+    <h3>Construcción Civil</h3>
 <p>Diseño arquitectónico, análisis estructural y ejecución de proyectos con estándares de calidad garantizados.</p>
-</div>
-<div class="service-card">
-<i class="fas fa-tools"></i>
-<h3>Servicios Auxiliares</h3>
-<p>Cercos eléctricos, cercos perimétricos, alquiler de equipos de medición, andamios y herramientas especializadas para construcción.</p>
-</div>
-<div class="service-card">
-<i class="fas fa-cogs"></i>
-<h3>Otros Servicios</h3>
+    <button class="btn-ver-mas-servicio">Ver más</button>
+  </div>
+</div
+<div class="services-grid">
+  <div class="service-card" data-service-id="7">
+    <i class="fas fa-bolt"></i>
+    <h3>Servicios Auxiliares</h3>
+    <p>Cercos eléctricos, cercos perimétricos, alquiler de equipos de medición, andamios y herramientas especializadas para construcción.</p>
+    <button class="btn-ver-mas-servicio">Ver más</button>
+  </div>
+</div
+<div class="services-grid">
+  <div class="service-card" data-service-id="8">
+    <i class="fas fa-bolt"></i>
+    <h3>Otros Servicios</h3>
 <p>Gas GLP, pintura, drywall, soldadura y servicios especializados complementarios para soluciones integrales en su proyecto.</p>
-</div>
-</div>
+    <button class="btn-ver-mas-servicio">Ver más</button>
+  </div>
+</div
 </div>
 </section>
+
+<div id="serviceModal" class="modal-servicio">
+  <div class="modal-servicio-content">
+    <span class="close-modal-servicio">&times;</span>
+    <div class="modal-servicio-header">
+      <h2 id="modalServiceTitle">Título del Servicio</h2>
+    </div>
+    <div class="modal-servicio-body">
+      <div class="modal-servicio-gallery">
+        <div class="main-service-image-container">
+          <img id="mainServiceImage" src="" alt="Imagen principal del servicio">
+        </div>
+        <div class="service-thumbnail-gallery" id="serviceThumbnailGallery">
+          <!-- Miniaturas dinámicas -->
+        </div>
+      </div>
+      <div class="modal-servicio-description">
+        <h3>Descripción</h3>
+        <p id="modalServiceDescription"></p>
+        <div class="service-details">
+          <h4>Trabajos que realizamos</h4>
+          <ul id="modalServiceWorks"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Proyectos Destacados -->
 <section class="projects" id="proyectos">
