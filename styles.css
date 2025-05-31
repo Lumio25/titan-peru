@@ -1006,5 +1006,45 @@ footer {
     text-justify: inter-word;
     line-height: 1.6;
 }
+/* Tipografía mejorada para la sección Nosotros */
+.nosotros-texto p,
+.valores-lista p {
+    font-size: 1.18rem;           /* Tamaño de letra moderno y legible */
+    line-height: 1.7;             /* Interlineado amplio */
+    letter-spacing: 0.06em;       /* Espacio entre caracteres */
+    margin-bottom: 28px;          /* Espacio después de cada párrafo */
+    color: #222738de;
+    transition: color 0.3s;
+    position: relative;
+    padding-bottom: 2px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.nosotros-texto p:last-child,
+.valores-lista p:last-child {
+    margin-bottom: 0;
+}
+
+/* Detalle visual: subrayado animado al pasar el cursor */
+.nosotros-texto p:hover,
+.valores-lista p:hover {
+    color: #4e60cc;
+}
+.nosotros-texto p::after,
+.valores-lista p::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #6f86d6 0%, #48c6ef 100%);
+    transition: width 0.35s;
+    border-radius: 2px;
+}
+.nosotros-texto p:hover::after,
+.valores-lista p:hover::after {
+    width: 60%;
+}
 
 
