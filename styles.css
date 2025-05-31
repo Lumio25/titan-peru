@@ -988,11 +988,14 @@ footer {
     }
 }
 /* JUSTIFICAR SOLO EL CUERPO DE TEXTO DE NOSOTROS */
-.nosotros-texto p {
+.nosotros-texto p,
+.valores-lista p {
     text-align: justify;
     text-justify: inter-word;
+    line-height: 1.7;         /* Interlineado */
+    letter-spacing: 0.04em;   /* Espacio entre caracteres */
+    margin-bottom: 22px;      /* Espacio después del párrafo */
 }
-
 .valores-lista p {
     text-align: justify;
     text-justify: inter-word;
@@ -1003,4 +1006,5 @@ footer {
     text-justify: inter-word;
     line-height: 1.6;
 }
+
 
