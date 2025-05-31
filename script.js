@@ -378,3 +378,260 @@ if (bannerImage && bannerImageMobile) {
         }
     });
 });
+
+// Datos de los servicios (puedes personalizar las imágenes y textos)
+const serviciosData = {
+    "1": {
+        titulo: "Instalaciones Eléctricas",
+        descripcion: "Realizamos proyectos eléctricos en baja y media tensión, desde el diseño hasta la ejecución y mantenimiento, cumpliendo con las normativas vigentes y garantizando seguridad y eficiencia.",
+        trabajos: [
+            "Instalación de tableros eléctricos",
+            "Tendido de cableado estructurado",
+            "Iluminación interior y exterior",
+            "Sistemas de puesta a tierra",
+            "Mantenimiento preventivo y correctivo",
+            "Automatización y control"
+        ],
+        imagenes: [
+            "img/servicio1-1.jpg",
+            "img/servicio1-2.jpg",
+            "img/servicio1-3.jpg",
+            "img/servicio1-4.jpg",
+            "img/servicio1-5.jpg",
+            "img/servicio1-6.jpg"
+        ]
+    },
+    "2": {
+        titulo: "Instalaciones Sanitarias",
+        descripcion: "Ofrecemos soluciones integrales en instalaciones sanitarias para edificaciones residenciales, comerciales e industriales, asegurando funcionalidad y cumplimiento de estándares de calidad.",
+        trabajos: [
+            "Redes de agua fría y caliente",
+            "Instalación de grifería y sanitarios",
+            "Sistemas de desagüe y ventilación",
+            "Mantenimiento de bombas y cisternas",
+            "Sistemas de presión constante",
+            "Detección y reparación de fugas"
+        ],
+        imagenes: [
+            "img/servicio2-1.jpg",
+            "img/servicio2-2.jpg",
+            "img/servicio2-3.jpg",
+            "img/servicio2-4.jpg",
+            "img/servicio2-5.jpg",
+            "img/servicio2-6.jpg"
+        ]
+    },
+    "3": {
+        titulo: "Agua Contra Incendio",
+        descripcion: "Diseñamos e instalamos sistemas de agua contra incendio, cumpliendo con las normativas nacionales e internacionales para la protección de personas y bienes.",
+        trabajos: [
+            "Instalación de rociadores automáticos",
+            "Redes de tuberías y válvulas",
+            "Sistemas de bombeo contra incendio",
+            "Gabinetes y mangueras",
+            "Pruebas hidráulicas y certificación",
+            "Mantenimiento de sistemas"
+        ],
+        imagenes: [
+            "img/servicio3-1.jpg",
+            "img/servicio3-2.jpg",
+            "img/servicio3-3.jpg",
+            "img/servicio3-4.jpg",
+            "img/servicio3-5.jpg",
+            "img/servicio3-6.jpg"
+        ]
+    },
+    "4": {
+        titulo: "Corrientes Débiles",
+        descripcion: "Implementamos sistemas de corrientes débiles para seguridad, comunicación y automatización, integrando tecnología de vanguardia en cada proyecto.",
+        trabajos: [
+            "Instalación de CCTV y alarmas",
+            "Redes de datos y telefonía",
+            "Sistemas de intercomunicación",
+            "Control de acceso",
+            "Cableado estructurado",
+            "Mantenimiento de sistemas"
+        ],
+        imagenes: [
+            "img/servicio4-1.jpg",
+            "img/servicio4-2.jpg",
+            "img/servicio4-3.jpg",
+            "img/servicio4-4.jpg",
+            "img/servicio4-5.jpg",
+            "img/servicio4-6.jpg"
+        ]
+    },
+    "5": {
+        titulo: "HVAC",
+        descripcion: "Ofrecemos soluciones en climatización, ventilación y aire acondicionado para todo tipo de ambientes, priorizando eficiencia energética y confort.",
+        trabajos: [
+            "Instalación de equipos de aire acondicionado",
+            "Sistemas de ventilación mecánica",
+            "Mantenimiento de equipos HVAC",
+            "Sistemas de extracción de aire",
+            "Automatización de climatización",
+            "Diagnóstico y reparación"
+        ],
+        imagenes: [
+            "img/servicio5-1.jpg",
+            "img/servicio5-2.jpg",
+            "img/servicio5-3.jpg",
+            "img/servicio5-4.jpg",
+            "img/servicio5-5.jpg",
+            "img/servicio5-6.jpg"
+        ]
+    },
+    "6": {
+        titulo: "Construcción Civil",
+        descripcion: "Desarrollamos proyectos de construcción civil desde la planificación hasta la entrega final, garantizando calidad, seguridad y cumplimiento de plazos.",
+        trabajos: [
+            "Obras de albañilería y concreto",
+            "Estructuras metálicas y de concreto",
+            "Acabados y revestimientos",
+            "Supervisión de obra",
+            "Remodelaciones y ampliaciones",
+            "Gestión de permisos y licencias"
+        ],
+        imagenes: [
+            "img/servicio6-1.jpg",
+            "img/servicio6-2.jpg",
+            "img/servicio6-3.jpg",
+            "img/servicio6-4.jpg",
+            "img/servicio6-5.jpg",
+            "img/servicio6-6.jpg"
+        ]
+    },
+    "7": {
+        titulo: "Servicios Auxiliares",
+        descripcion: "Brindamos servicios auxiliares que complementan la ejecución de proyectos de ingeniería y construcción, asegurando soluciones integrales.",
+        trabajos: [
+            "Cercos eléctricos y perimétricos",
+            "Alquiler de equipos y herramientas",
+            "Montaje de andamios",
+            "Medición y pruebas eléctricas",
+            "Soporte técnico en obra",
+            "Logística y transporte"
+        ],
+        imagenes: [
+            "img/servicio7-1.jpg",
+            "img/servicio7-2.jpg",
+            "img/servicio7-3.jpg",
+            "img/servicio7-4.jpg",
+            "img/servicio7-5.jpg",
+            "img/servicio7-6.jpg"
+        ]
+    },
+    "8": {
+        titulo: "Otros Servicios",
+        descripcion: "Ofrecemos servicios complementarios como gas GLP, pintura, drywall, soldadura y más, adaptándonos a las necesidades específicas de cada cliente.",
+        trabajos: [
+            "Instalación de gas GLP",
+            "Trabajos de pintura y acabados",
+            "Construcción en drywall",
+            "Soldadura y estructuras metálicas",
+            "Mantenimiento general",
+            "Servicios personalizados"
+        ],
+        imagenes: [
+            "img/servicio8-1.jpg",
+            "img/servicio8-2.jpg",
+            "img/servicio8-3.jpg",
+            "img/servicio8-4.jpg",
+            "img/servicio8-5.jpg",
+            "img/servicio8-6.jpg"
+        ]
+    }
+};
+
+// Modal de Servicios
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceModal = document.getElementById('serviceModal');
+    const serviceCards = document.querySelectorAll('.service-card');
+    const closeServiceBtn = document.querySelector('.close-modal-servicio');
+
+    // Abrir modal al hacer click en "Ver más"
+    serviceCards.forEach(card => {
+        const btn = card.querySelector('.btn-ver-mas-servicio');
+        if (btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const serviceId = card.getAttribute('data-service-id');
+                openServiceModal(serviceId);
+            });
+        }
+    });
+
+    function openServiceModal(serviceId) {
+        const data = serviciosData[serviceId];
+        if (!data || !serviceModal) return;
+
+        // Título
+        document.getElementById('modalServiceTitle').textContent = data.titulo;
+        // Descripción
+        document.getElementById('modalServiceDescription').textContent = data.descripcion;
+        // Trabajos
+        const worksList = document.getElementById('modalServiceWorks');
+        worksList.innerHTML = '';
+        data.trabajos.forEach(trabajo => {
+            const li = document.createElement('li');
+            li.textContent = trabajo;
+            worksList.appendChild(li);
+        });
+        // Galería principal
+        const mainImage = document.getElementById('mainServiceImage');
+        mainImage.src = data.imagenes[0];
+        mainImage.alt = data.titulo;
+
+        // Miniaturas
+        const thumbnailGallery = document.getElementById('serviceThumbnailGallery');
+        thumbnailGallery.innerHTML = '';
+        data.imagenes.forEach((img, idx) => {
+            const thumb = document.createElement('img');
+            thumb.src = img;
+            thumb.alt = `${data.titulo} - Imagen ${idx+1}`;
+            thumb.classList.add('service-thumbnail');
+            if (idx === 0) thumb.classList.add('active');
+            thumb.addEventListener('click', function() {
+                document.querySelectorAll('.service-thumbnail').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                mainImage.src = this.src;
+                mainImage.alt = this.alt;
+                mainImage.style.opacity = '0.7';
+                setTimeout(() => { mainImage.style.opacity = '1'; }, 200);
+            });
+            thumbnailGallery.appendChild(thumb);
+        });
+
+        // Mostrar modal
+        serviceModal.style.display = 'block';
+        setTimeout(() => {
+            serviceModal.classList.add('show');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Cerrar modal
+    function closeServiceModal() {
+        if (!serviceModal) return;
+        serviceModal.classList.remove('show');
+        setTimeout(() => {
+            serviceModal.style.display = 'none';
+            document.body.style.overflow = '';
+        }, 300);
+    }
+
+    if (closeServiceBtn) {
+        closeServiceBtn.addEventListener('click', closeServiceModal);
+    }
+    window.addEventListener('click', function(event) {
+        if (event.target === serviceModal) {
+            closeServiceModal();
+        }
+    });
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeServiceModal();
+        }
+    });
+});
+
