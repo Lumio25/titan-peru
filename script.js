@@ -1,7 +1,7 @@
 // Datos de los proyectos (normalmente esto vendría de una base de datos)
 const proyectosData = {
     "1": {
-        titulo: "METRO Lima Tambo",
+        titulo: "Metro Lima Tambo",
         estado: "Entregado",
         descripcion: "Ejecución integral de los sistemas IIEE (instalaciones eléctricas), IISS (instalaciones sanitarias), ACI (automatización y control de iluminación en áreas comunes) y DACI (detección y alarma contra incendios), garantizando eficiencia operativa, confort y seguridad integral en toda la edificación. El proyecto incluyó la implementación de sistemas de alta eficiencia energética y automatización de acuerdo a las últimas tendencias en centros comerciales inteligentes.",
         ubicacion: "San Isidro, Lima",
@@ -19,7 +19,7 @@ const proyectosData = {
         ]
     },
     "2": {
-        titulo: "Rehabilitación IE. Gastón Vidal",
+        titulo: "IE. Gastón Vidal - Nuevo Chimbote",
         estado: "Entregado",
         descripcion: "Rehabilitación integral de la Institución Educativa Gastón Vidal, incluyendo la implementación de sistemas eléctricos (IIEE), instalaciones sanitarias (IISS) y corrientes débiles. El proyecto abarca el diseño, ejecución y mantenimiento para mejorar la infraestructura educativa con altos estándares de calidad y seguridad.",
         ubicacion: "Nuevo Chimbote - Santa - Ancash",
@@ -75,7 +75,7 @@ const proyectosData = {
         ]
     },
     "5": {
-        titulo: "Rehabilitación IE. Pariacoto",
+        titulo: "IE. Pariacoto - Ancash",
         estado: "En Ejecución",
         descripcion: "Proyecto de rehabilitación integral para la Institución Educativa Pariacoto en la región Ancash. Incluye la renovación completa de instalaciones eléctricas, sanitarias y sistemas de corrientes débiles para modernizar la infraestructura educativa y proporcionar un entorno de aprendizaje seguro y funcional para los estudiantes.",
         ubicacion: "Pariacoto, Ancash",
@@ -93,7 +93,7 @@ const proyectosData = {
         ]
     },
     "6": {
-        titulo: "Rehabilitación IE. San Nicolas",
+        titulo: "IE. San Nicolas - Ancash",
         estado: "En Ejecución",
         descripcion: "Rehabilitación integral de la infraestructura de servicios para la Institución Educativa San Nicolas en Ancash. El proyecto contempla la implementación de sistemas IIEE (instalaciones eléctricas), IISS (instalaciones sanitarias) y Corrientes Débiles para la institución educativa, con el objetivo de mejorar la calidad de la infraestructura y servicios educativos en la región.",
         ubicacion: "San Nicolas, Ancash",
