@@ -1114,3 +1114,21 @@ footer {
     height: auto;
 }
 
+.service-image-description {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+    color: var(--color-gray); /* O el color que prefieras */
+    font-size: 14px;
+    line-height: 1.5;
+}
+.service-image-description h4 {
+    max-width: 80%;
+    margin: 0 auto 8px auto;
+    text-align: center;
+    color: var(--color-primary); /* Por ejemplo */
+    font-size: 16px;
+    font-weight: 600;
+}
+
