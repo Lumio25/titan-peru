@@ -1113,4 +1113,29 @@ footer {
     width: 100%;
     height: auto;
 }
+.service-image-item {
+    position: relative; /* Necesario para el posicionamiento absoluto del texto */
+    overflow: hidden; /* Para ocultar cualquier desbordamiento */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.service-image-container img {
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.service-image-text-overlay {
+    position: absolute; /* Posiciona el texto sobre la imagen */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar completamente */
+    color: white; /* Color del texto */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+    padding: 10px 20px; /* Espaciado alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados para el fondo */
+    text-align: center; /* Centra el texto */
+    width: 90%; /* Opcional: ajusta el ancho del contenedor de texto */
+}
 
