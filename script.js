@@ -676,20 +676,20 @@ function openServiceModal(serviceType) {
     const galleryGrid = document.querySelector('.service-gallery-grid');
     galleryGrid.innerHTML = '';
     
-    serviceData.imagenes.forEach(imagen => {
-        const imageItem = document.createElement('div');
-        imageItem.className = 'service-image-item';
-        imageItem.innerHTML = `
-            <div class="service-image-container">
-                <img src="${imagen.src}" alt="${imagen.titulo}">
-            </div>
-            <div class="service-image-description">
+serviceData.imagenes.forEach(imagen => {
+    const imageItem = document.createElement('div');
+    imageItem.className = 'service-image-item';
+    imageItem.innerHTML = `
+        <div class="service-image-container">
+            <img src="${imagen.src}" alt="${imagen.titulo}">
+            <div class="service-image-text-overlay">
                 <h4>${imagen.titulo}</h4>
                 <p>${imagen.descripcion}</p>
             </div>
-        `;
-        galleryGrid.appendChild(imageItem);
-    });
+        </div>
+    `;
+    galleryGrid.appendChild(imageItem);
+});
     
     // Mostrar modal
     modal.style.display = 'block';
