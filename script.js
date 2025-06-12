@@ -450,7 +450,216 @@ const serviciosData = {
             }
         ]
     },
-    // Agrega más servicios según necesites...
+    "incendio": {
+        titulo: "Agua Contra Incendio",
+        imagenes: [
+            {
+                src: "img/servicio-incendio-1.jpg",
+                titulo: "Sistemas de Rociadores",
+                descripcion: "Instalación de sistemas de rociadores automáticos."
+            },
+            {
+                src: "img/servicio-incendio-2.jpg",
+                titulo: "Extintores",
+                descripcion: "Mantenimiento y recarga de extintores."
+            },
+            {
+                src: "img/servicio-incendio-3.jpg",
+                titulo: "Alarmas Contra Incendio",
+                descripcion: "Instalación de sistemas de alarmas y detección de incendios."
+            },
+            {
+                src: "img/servicio-incendio-4.jpg",
+                titulo: "Capacitación",
+                descripcion: "Capacitación en manejo de emergencias y uso de extintores."
+            },
+            {
+                src: "img/servicio-incendio-5.jpg",
+                titulo: "Planes de Emergencia",
+                descripcion: "Desarrollo de planes de emergencia y evacuación."
+            },
+            {
+                src: "img/servicio-incendio-6.jpg",
+                titulo: "Inspecciones",
+                descripcion: "Inspecciones periódicas de sistemas contra incendios."
+            }
+        ]
+    },
+    "corrientes": {
+        titulo: "Corrientes Débiles",
+        imagenes: [
+            {
+                src: "img/servicio-corrientes-1.jpg",
+                titulo: "CCTV",
+                descripcion: "Instalación de sistemas de cámaras de seguridad."
+            },
+            {
+                src: "img/servicio-corrientes-2.jpg",
+                titulo: "Intercomunicadores",
+                descripcion: "Sistemas de intercomunicación para edificios."
+            },
+            {
+                src: "img/servicio-corrientes-3.jpg",
+                titulo: "Redes de Datos",
+                descripcion: "Instalación de redes de datos y telecomunicaciones."
+            },
+            {
+                src: "img/servicio-corrientes-4.jpg",
+                titulo: "Control de Acceso",
+                descripcion: "Sistemas de control de acceso y seguridad."
+            },
+            {
+                src: "img/servicio-corrientes-5.jpg",
+                titulo: "Sistemas de Sonido",
+                descripcion: "Instalación de sistemas de sonido y megafonía."
+            },
+            {
+                src: "img/servicio-corrientes-6.jpg",
+                titulo: "Mantenimiento",
+                descripcion: "Mantenimiento de sistemas de corrientes débiles."
+            }
+        ]
+    },
+    "hvac": {
+        titulo: "HVAC",
+        imagenes: [
+            {
+                src: "img/servicio-hvac-1.jpg",
+                titulo: "Instalación de Aire Acondicionado",
+                descripcion: "Instalación de sistemas de aire acondicionado."
+            },
+            {
+                src: "img/servicio-hvac-2.jpg",
+                titulo: "Mantenimiento de HVAC",
+                descripcion: "Mantenimiento de sistemas de calefacción y ventilación."
+            },
+            {
+                src: "img/servicio-hvac-3.jpg",
+                titulo: "Sistemas de Ventilación",
+                descripcion: "Instalación de sistemas de ventilación mecánica."
+            },
+            {
+                src: "img/servicio-hvac-4.jpg",
+                titulo: "Calefacción",
+                descripcion: "Instalación de sistemas de calefacción para espacios."
+            },
+            {
+                src: "img/servicio-hvac-5.jpg",
+                titulo: "Optimización Energética",
+                descripcion: "Soluciones para optimizar el consumo energético."
+            },
+            {
+                src: "img/servicio-hvac-6.jpg",
+                titulo: "Consultoría",
+                descripcion: "Consultoría en sistemas HVAC."
+            }
+        ]
+    },
+    "construccion": {
+        titulo: "Construcción Civil",
+        imagenes: [
+            {
+                src: "img/servicio-construccion-1.jpg",
+                titulo: "Diseño Arquitectónico",
+                descripcion: "Diseño arquitectónico de proyectos de construcción."
+            },
+            {
+                src: "img/servicio-construccion-2.jpg",
+                titulo: "Análisis Estructural",
+                descripcion: "Análisis estructural para garantizar la seguridad."
+            },
+            {
+                src: "img/servicio-construccion-3.jpg",
+                titulo: "Ejecución de Proyectos",
+                descripcion: "Ejecución de proyectos de construcción civil."
+            },
+            {
+                src: "img/servicio-construccion-4.jpg",
+                titulo: "Supervisión de Obras",
+                descripcion: "Supervisión de obras para asegurar calidad."
+            },
+            {
+                src: "img/servicio-construccion-5.jpg",
+                titulo: "Mantenimiento de Infraestructura",
+                descripcion: "Mantenimiento de infraestructura existente."
+            },
+            {
+                src: "img/servicio-construccion-6.jpg",
+                titulo: "Consultoría en Construcción",
+                descripcion: "Consultoría para proyectos de construcción."
+            }
+        ]
+    },
+    "auxiliares": {
+        titulo: "Servicios Auxiliares",
+        imagenes: [
+            {
+                src: "img/servicio-auxiliar-1.jpg",
+                titulo: "Cercos Eléctricos",
+                descripcion: "Instalación de cercos eléctricos para seguridad."
+            },
+            {
+                src: "img/servicio-auxiliar-2.jpg",
+                titulo: "Alquiler de Equipos",
+                descripcion: "Alquiler de equipos de medición y construcción."
+            },
+            {
+                src: "img/servicio-auxiliar-3.jpg",
+                titulo: "Andamios",
+                descripcion: "Suministro e instalación de andamios."
+            },
+            {
+                src: "img/servicio-auxiliar-4.jpg",
+                titulo: "Herramientas Especializadas",
+                descripcion: "Provisión de herramientas especializadas para construcción."
+            },
+            {
+                src: "img/servicio-auxiliar-5.jpg",
+                titulo: "Mantenimiento de Equipos",
+                descripcion: "Mantenimiento de equipos de construcción."
+            },
+            {
+                src: "img/servicio-auxiliar-6.jpg",
+                titulo: "Capacitación en Seguridad",
+                descripcion: "Capacitación en seguridad para trabajadores."
+            }
+        ]
+    },
+    "otros": {
+        titulo: "Otros Servicios",
+        imagenes: [
+            {
+                src: "img/servicio-otros-1.jpg",
+                titulo: "Gas GLP",
+                descripcion: "Instalación de sistemas de gas GLP."
+            },
+            {
+                src: "img/servicio-otros-2.jpg",
+                titulo: "Pintura",
+                descripcion: "Servicios de pintura para interiores y exteriores."
+            },
+            {
+                src: "img/servicio-otros-3.jpg",
+                titulo: "Drywall",
+                descripcion: "Instalación de sistemas de drywall."
+            },
+            {
+                src: "img/servicio-otros-4.jpg",
+                titulo: "Soldadura",
+                descripcion: "Servicios de soldadura para estructuras."
+            },
+            {
+                src: "img/servicio-otros-5.jpg",
+                titulo: "Servicios Especializados",
+                descripcion: "Servicios especializados complementarios."
+            },
+            {
+                src: "img/servicio-otros-6.jpg",
+                titulo: "Consultoría",
+                descripcion: "Consultoría para proyectos integrales."
+            }
+        ]
+    }
 };
 
 // Función para abrir el modal de servicios
