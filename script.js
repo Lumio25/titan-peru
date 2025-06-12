@@ -378,3 +378,161 @@ if (bannerImage && bannerImageMobile) {
         }
     });
 });
+// Datos de los servicios con imágenes
+const serviciosData = {
+    "electricas": {
+        titulo: "Instalaciones Eléctricas",
+        imagenes: [
+            {
+                src: "img/servicio-electrico-1.jpg",
+                titulo: "Tableros Eléctricos",
+                descripcion: "Instalación y mantenimiento de tableros de distribución eléctrica."
+            },
+            {
+                src: "img/servicio-electrico-2.jpg",
+                titulo: "Cableado Estructurado",
+                descripcion: "Sistemas de cableado para edificios comerciales e industriales."
+            },
+            {
+                src: "img/servicio-electrico-3.jpg",
+                titulo: "Iluminación LED",
+                descripcion: "Proyectos de iluminación eficiente con tecnología LED."
+            },
+            {
+                src: "img/servicio-electrico-4.jpg",
+                titulo: "Sistemas de Emergencia",
+                descripcion: "Instalación de sistemas de respaldo y emergencia eléctrica."
+            },
+            {
+                src: "img/servicio-electrico-5.jpg",
+                titulo: "Mantenimiento Preventivo",
+                descripcion: "Programas de mantenimiento para sistemas eléctricos."
+            },
+            {
+                src: "img/servicio-electrico-6.jpg",
+                titulo: "Automatización",
+                descripcion: "Sistemas de control y automatización industrial."
+            }
+        ]
+    },
+    "sanitarias": {
+        titulo: "Instalaciones Sanitarias",
+        imagenes: [
+            {
+                src: "img/servicio-sanitario-1.jpg",
+                titulo: "Redes de Agua",
+                descripcion: "Instalación de redes de agua potable y sistemas de distribución."
+            },
+            {
+                src: "img/servicio-sanitario-2.jpg",
+                titulo: "Sistemas de Desagüe",
+                descripcion: "Diseño e instalación de sistemas de evacuación de aguas."
+            },
+            {
+                src: "img/servicio-sanitario-3.jpg",
+                titulo: "Equipos de Bombeo",
+                descripcion: "Instalación y mantenimiento de sistemas de bombeo."
+            },
+            {
+                src: "img/servicio-sanitario-4.jpg",
+                titulo: "Tratamiento de Aguas",
+                descripcion: "Sistemas de tratamiento y purificación de agua."
+            },
+            {
+                src: "img/servicio-sanitario-5.jpg",
+                titulo: "Instalaciones Industriales",
+                descripcion: "Soluciones sanitarias para plantas industriales."
+            },
+            {
+                src: "img/servicio-sanitario-6.jpg",
+                titulo: "Mantenimiento Correctivo",
+                descripcion: "Reparación y mantenimiento de instalaciones sanitarias."
+            }
+        ]
+    },
+    // Agrega más servicios según necesites...
+};
+
+// Función para abrir el modal de servicios
+function openServiceModal(serviceType) {
+    const serviceData = serviciosData[serviceType];
+    const modal = document.getElementById('serviceModal');
+    
+    if (!serviceData || !modal) return;
+    
+    // Actualizar título
+    document.getElementById('serviceModalTitle').textContent = serviceData.titulo;
+    
+    // Limpiar y cargar imágenes
+    const galleryGrid = document.querySelector('.service-gallery-grid');
+    galleryGrid.innerHTML = '';
+    
+    serviceData.imagenes.forEach(imagen => {
+        const imageItem = document.createElement('div');
+        imageItem.className = 'service-image-item';
+        imageItem.innerHTML = `
+            <div class="service-image-container">
+                <img src="${imagen.src}" alt="${imagen.titulo}">
+            </div>
+            <div class="service-image-description">
+                <h4>${imagen.titulo}</h4>
+                <p>${imagen.descripcion}</p>
+            </div>
+        `;
+        galleryGrid.appendChild(imageItem);
+    });
+    
+    // Mostrar modal
+    modal.style.display = 'block';
+    setTimeout(() => {
+        modal.classList.add('show');
+    }, 10);
+    
+    // Bloquear scroll
+    document.body.style.overflow = 'hidden';
+}
+
+// Función para cerrar el modal de servicios
+function closeServiceModal() {
+    const modal = document.getElementById('serviceModal');
+    if (!modal) return;
+    
+    modal.classList.remove('show');
+    setTimeout(() => {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }, 300);
+}
+
+// Event listeners para los servicios
+document.addEventListener('DOMContentLoaded', function() {
+    // Agregar click a las tarjetas de servicio
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const serviceType = this.getAttribute('data-service');
+            openServiceModal(serviceType);
+        });
+    });
+    
+    // Cerrar modal
+    const closeBtn = document.querySelector('.close-service-modal');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeServiceModal);
+    }
+    
+    // Cerrar al hacer clic fuera
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById('serviceModal');
+        if (event.target === modal) {
+            closeServiceModal();
+        }
+    });
+    
+    // Cerrar con ESC
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeServiceModal();
+        }
+    });
+});
