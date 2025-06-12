@@ -676,20 +676,20 @@ function openServiceModal(serviceType) {
     const galleryGrid = document.querySelector('.service-gallery-grid');
     galleryGrid.innerHTML = '';
     
-serviceData.imagenes.forEach(imagen => {
-    const imageItem = document.createElement('div');
-    imageItem.className = 'service-image-item';
-    imageItem.innerHTML = `
-        <div class="service-image-container">
-            <img src="${imagen.src}" alt="${imagen.titulo}">
-            <div class="service-image-text-overlay">
-                <h4>${imagen.titulo}</h4>
-                <p>${imagen.descripcion}</p>
+    serviceData.imagenes.forEach(imagen => {
+        const imageItem = document.createElement('div');
+        imageItem.className = 'service-image-item';
+        imageItem.innerHTML = `
+            <div class="service-image-container">
+                <img src="${imagen.src}" alt="${imagen.titulo}">
+                <div class="service-image-text-overlay">
+                    <h4>${imagen.titulo}</h4>
+                    <p>${imagen.descripcion}</p>
+                </div>
             </div>
-        </div>
-    `;
-    galleryGrid.appendChild(imageItem);
-});
+        `;
+        galleryGrid.appendChild(imageItem);
+    });
     
     // Mostrar modal
     modal.style.display = 'block';
@@ -701,16 +701,31 @@ serviceData.imagenes.forEach(imagen => {
     document.body.style.overflow = 'hidden';
 }
 
-// Función para cerrar el modal de servicios
-function closeServiceModal() {
-    const modal = document.getElementById('serviceModal');
-    if (!modal) return;
-    
-    modal.classList.remove('show');
-    setTimeout(() => {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-    }, 300);
+// CSS para centrar el texto
+.service-image-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.service-image-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 90%;
 }
 
 // Event listeners para los servicios
