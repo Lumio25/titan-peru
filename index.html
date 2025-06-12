@@ -151,46 +151,47 @@
 </div>
 </section>
 <!-- Servicios -->
+<!-- Actualiza la sección de servicios -->
 <section class="services" id="servicios">
 <div class="container">
 <h2 class="section-title">Nuestros Servicios</h2>
 <div class="services-grid">
-<div class="service-card">
+<div class="service-card" data-service="electricas">
 <i class="fas fa-bolt"></i>
 <h3>Instalaciones Eléctricas</h3>
 <p>Proyectos en baja y media tensión con personal altamente calificado para satisfacer sus necesidades energéticas.</p>
 </div>
-<div class="service-card">
+<div class="service-card" data-service="sanitarias">
 <i class="fas fa-faucet"></i>
 <h3>Instalaciones Sanitarias</h3>
 <p>Servicios integrales de ingeniería, construcción, supervisión y mantenimiento de instalaciones sanitarias.</p>
 </div>
-<div class="service-card">
+<div class="service-card" data-service="incendio">
 <i class="fas fa-fire-extinguisher"></i>
 <h3>Agua Contra Incendio</h3>
 <p>Soluciones profesionales en instalación, mantenimiento y protocolos de prueba para equipos de protección contra incendios.</p>
 </div>
-<div class="service-card">
+<div class="service-card" data-service="corrientes">
 <i class="fas fa-network-wired"></i>
 <h3>Corrientes Débiles</h3>
 <p>Intercomunicadores, CCTV, sistemas de seguridad, redes de datos, telefonía y sistemas de comunicación especializados.</p>
 </div>
-<div class="service-card">
-<i class="fas fa-fan icono"></i>
+<div class="service-card" data-service="hvac">
+<i class="fas fa-thermometer-half"></i>
 <h3>HVAC</h3>
 <p>Instalación y mantenimiento de sistemas de calefacción, ventilación y aire acondicionado para garantizar un ambiente confortable y eficiente.</p>
 </div>
-<div class="service-card">
+<div class="service-card" data-service="construccion">
 <i class="fas fa-hard-hat"></i>
 <h3>Construcción Civil</h3>
 <p>Diseño arquitectónico, análisis estructural y ejecución de proyectos con estándares de calidad garantizados.</p>
 </div>
-<div class="service-card">
+<div class="service-card" data-service="auxiliares">
 <i class="fas fa-tools"></i>
 <h3>Servicios Auxiliares</h3>
 <p>Cercos eléctricos, cercos perimétricos, alquiler de equipos de medición, andamios y herramientas especializadas para construcción.</p>
 </div>
-<div class="service-card">
+<div class="service-card" data-service="otros">
 <i class="fas fa-cogs"></i>
 <h3>Otros Servicios</h3>
 <p>Gas GLP, pintura, drywall, soldadura y servicios especializados complementarios para soluciones integrales en su proyecto.</p>
@@ -198,6 +199,21 @@
 </div>
 </div>
 </section>
+
+<!-- Agrega este modal antes del cierre del body -->
+<div id="serviceModal" class="service-modal">
+    <div class="service-modal-content">
+        <span class="close-service-modal">&times;</span>
+        <div class="service-modal-header">
+            <h2 id="serviceModalTitle">Título del Servicio</h2>
+        </div>
+        <div class="service-modal-body">
+            <div class="service-gallery-grid">
+                <!-- Las imágenes se cargarán dinámicamente -->
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Proyectos Destacados -->
 <section class="projects" id="proyectos">
