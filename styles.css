@@ -1169,4 +1169,8 @@ footer {
         font-size: 30px;
     }
 }
+.nosotros-imagen img {
+  width: 220px;
+  height: auto;
+}
 
