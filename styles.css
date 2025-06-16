@@ -1173,4 +1173,27 @@ footer {
   width: 440px;
   height: auto;
 }
+/* CSS */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.whatsapp-button {
+    background-color: #25D366; /* Color de WhatsApp */
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white; /* Color del icono */
+    font-size: 24px; /* Tamaño del icono */
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Color más oscuro al pasar el mouse */
+}
