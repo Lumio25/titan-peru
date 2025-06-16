@@ -1131,69 +1131,46 @@ footer {
     font-size: 16px;
     font-weight: 600;
 }
-.btn-wsp{
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    line-height: 63px;
-    bottom: 25px;
-    right: 25px;
-    background: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 35px;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
-    z-index: 100;
-    transition: all 300ms ease;
-    text-decoration: none;
-}
-
-.btn-wsp:hover{
-    background: #20ba5a;
-    transform: scale(1.1);
-    box-shadow: 0px 2px 15px rgba(0,0,0,0.4);
-}
-
-.btn-wsp .icono {
-    line-height: 1;
-}
-
-@media only screen and (min-width:320px) and (max-width:768px){
-    .btn-wsp{
-        width: 63px;
-        height: 63px;
-        line-height: 66px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 30px;
-    }
-}
 .nosotros-imagen img {
   width: 440px;
   height: auto;
 }
-/* CSS */
-.floating-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn-wsp{
-    background-color: #25D366; /* Color de WhatsApp */
-    border-radius: 50%;
-    padding: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    color: white; /* Color del icono */
-    font-size: 24px; /* Tamaño del icono */
-    transition: background-color 0.3s;
+.btn-wsp {
+    position: fixed; /* Posiciona el botón de forma fija */
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Altura del botón */
+    bottom: 25px; /* Distancia desde el fondo de la ventana */
+    right: 25px; /* Distancia desde el lado derecho de la ventana */
+    background: #25D366; /* Color de WhatsApp */
+    color: #FFF; /* Color del icono */
+    border-radius: 50%; /* Hace que el botón sea circular */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 35px; /* Tamaño del icono */
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3); /* Sombra del botón */
+    z-index: 100; /* Asegura que el botón esté por encima de otros elementos */
+    transition: all 300ms ease; /* Transición suave para el hover */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    display: flex; /* Usar flexbox para centrar el icono */
+    justify-content: center; /* Centra el icono horizontalmente */
+    align-items: center; /* Centra el icono verticalmente */
 }
 
 .btn-wsp:hover {
-    background-color: #128C7E; /* Color más oscuro al pasar el mouse */
+    background: #20ba5a; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.1); /* Aumenta el tamaño del botón al pasar el mouse */
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada al pasar el mouse */
+}
+
+.btn-wsp .icono {
+    line-height: 1; /* Asegura que el icono esté centrado */
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .btn-wsp {
+        width: 63px; /* Ancho del botón en pantallas más pequeñas */
+        height: 63px; /* Altura del botón en pantallas más pequeñas */
+        bottom: 20px; /* Distancia desde el fondo de la ventana en pantallas más pequeñas */
+        right: 20px; /* Distancia desde el lado derecho de la ventana en pantallas más pequeñas */
+        font-size: 30px; /* Tamaño del icono en pantallas más pequeñas */
+    }
 }
